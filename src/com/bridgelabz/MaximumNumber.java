@@ -22,9 +22,14 @@ public class MaximumNumber <T extends Comparable<T>> {
     }
 
     public void findMax() {
+        MaximumNumber<T> maximumNumber;
         MaximumNumber.findMax(this.variable1, this.variable2, this.variable3, this.variable4, this.variable5, this.variable6);
     }
 
+    static <E> void printMax(E Maximum, ArrayList<E>list){
+        System.out.println();
+        System.out.println(Maximum+" is maximum out of =" +list);
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to the Generics Problems");
         System.out.println("\n Test the Maximum Three Numbers ");
