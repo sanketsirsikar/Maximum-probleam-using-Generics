@@ -10,9 +10,13 @@ public class MaximumNumber {
         Float floatNumber1 = 10.2f;
         Float floatNumber2 = 18.80f;
         Float floatNumber3 = 15.70f;
+        String string1 = "Apple";
+        String string2 = "Banana";
+        String string3 = "Peach";
 
         findMax(firstNumber,secondNumber,thirdNumber);
         findMax(floatNumber1, floatNumber2, floatNumber3);
+        findMaxString(string1, string2, string3);
     }
     static void findMax(Integer firstNumber,Integer secondNumber,Integer thirdNumber ){
         Integer maximumNumber;
@@ -40,5 +44,16 @@ public class MaximumNumber {
         }
         System.out.println(maximumNumber + " is max out of " + firstNumber + ", " +secondNumber + " and " +thirdNumber);
     }
+    public static void findMaxString(String firstString, String secondString, String thirdString) {
+        String maximumstring;
 
+        if (firstString.compareTo(secondString) > 0 && firstString.compareTo(thirdString) > 0) {
+            maximumstring = firstString;
+        } else if (secondString.compareTo(firstString) > 0 && secondString.compareTo(thirdString) > 0) {
+            maximumstring = secondString;
+        } else {
+            maximumstring = thirdString;
+        }
+        System.out.println(maximumstring + " is max out of " + firstString + ", " +secondString + " and " +thirdString);
+    }
 }
